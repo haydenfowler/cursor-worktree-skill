@@ -17,18 +17,15 @@ When you're done and close that Cursor window, the worktree is **automatically c
 
 Multiple worktrees can be open at once — no conflicts with your main branch or other reviews.
 
-## Features
+## Usage
 
-- **Zero disruption** — Your current work stays exactly as-is
-- **Automatic cleanup** — Worktree removed when you close the Cursor window
-- **Multiple reviews** — Open as many branches as you need simultaneously
-- **Simple invocation** — Just ask Cursor to "review branch X"
+From any Git repository in Cursor, type in the chat:
 
-## Requirements
+```
+/git-worktree feature/new-login
+```
 
-- macOS (uses AppleScript for window detection)
-- Git
-- Cursor IDE with the `cursor` CLI installed
+This will create a worktree, open it in a new Cursor window, and automatically clean up when you close that window.
 
 ## Installation
 
@@ -55,15 +52,18 @@ cp -r git-worktree ~/.cursor/skills/
 chmod +x ~/.cursor/skills/git-worktree/scripts/wt.sh
 ```
 
-## Usage
+## Features
 
-From any Git repository in Cursor, type in the chat:
+- **Zero disruption** — Your current work stays exactly as-is
+- **Automatic cleanup** — Worktree removed when you close the Cursor window
+- **Multiple reviews** — Open as many branches as you need simultaneously
+- **Simple invocation** — Just ask Cursor to "review branch X"
 
-```
-/git-worktree feature/new-login
-```
+## Requirements
 
-This will create a worktree, open it in a new Cursor window, and automatically clean up when you close that window.
+- macOS (uses AppleScript for window detection)
+- Git
+- Cursor IDE with the `cursor` CLI installed
 
 ## Troubleshooting
 
